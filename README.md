@@ -1,9 +1,7 @@
 Teamcity Server (MSSQL)
 =======================
 
-Docker image that extends the official [teamcity-server](
-    
-) image with the MSSQL JDBC driver. 
+Docker image that extends the official [teamcity-server](https://hub.docker.com/r/jetbrains/teamcity-server/) image with the MSSQL JDBC driver. 
 
 Usage
 -----

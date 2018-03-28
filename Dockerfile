@@ -4,4 +4,4 @@ LABEL maintainer="aevitas@github.com"
 
 RUN apt-get install wget -y
 
-COPY driver/* /data/teamcity_server/datadir/lib/jdbc
+COPY driver/* /data/teamcity_server/datadir/lib/jdbc/

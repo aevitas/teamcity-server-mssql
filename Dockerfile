@@ -2,8 +2,7 @@ FROM jetbrains/teamcity-server:2017.2.3
 
 LABEL maintainer="aevitas@github.com"
 
-VOLUME /data/teamcity_server/datadir
-VOLUME /opt/teamcity/logs
+VOLUME /data/teamcity_server/datadir/lib/jdbc/
 
 CMD apt-get install wget gzip tar -y \
         && mkdir /tmp/mssql-driver \

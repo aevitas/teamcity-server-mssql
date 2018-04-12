@@ -2,6 +2,10 @@ FROM jetbrains/teamcity-server:2017.2.3
 
 LABEL maintainer="aevitas@github.com"
 
-RUN apt-get install wget -y
-
-COPY driver/* /data/teamcity_server/datadir/lib/jdbc/
+CMD apt-get install wget gzip tar -y
+CMD mkdir tmp \
+        && cd tmp \
+        && wget https://download.microsoft.com/download/3/F/7/3F74A9B9-C5F0-43EA-A721-07DA590FD186/sqljdbc_6.2.2.1_enu.tar.gz \
+        && gzip -d sqljdbc_6.2.2.1_enu.tar.gz \
+        && tar -xf sqljdbc_6.2.2.1_enu.tar \
+        && mv sqljdbc_6.2/enu/* /data/teamcity_server/datadir/lib/jdbc/
